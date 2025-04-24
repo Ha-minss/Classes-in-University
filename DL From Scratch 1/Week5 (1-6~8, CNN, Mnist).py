@@ -61,7 +61,7 @@ def train(model, train_loader, optimizer, epoch):
         loss.backward()
         optimizer.step()
     # 평균 훈련 손실 계산
-    train_loss /= len(train)
+    train_loss /= len(train_loader)
     train_losses.append(train_loss)
     print(f'Epoch {epoch}, Training loss: {train_loss:.4f}')
 
